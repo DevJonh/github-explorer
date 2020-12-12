@@ -11,6 +11,15 @@ export const Title = styled.h1`
   margin-top: 80px;
   max-width: 450px;
   line-height: 56px;
+
+  @media only screen and (max-width: 430px) {
+    font-size: 34px;
+    max-width: 90%;
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 375px) {
+    font-size: 28px;
+  }
 `;
 
 export const Form = styled.form<FormProps>`
@@ -52,6 +61,23 @@ export const Form = styled.form<FormProps>`
       background: ${shade(0.2, '#04d361')};
     }
   }
+
+  @media only screen and (max-width: 430px) {
+    flex-direction: column;
+    margin-top: 80px;
+    max-width: 90%;
+
+    input {
+      flex: auto;
+      height: 60px;
+      border-radius: 5px 5px 0 0;
+    }
+    button {
+      width: auto;
+      height: 60px;
+      border-radius: 0 0 5px 5px;
+    }
+  }
 `;
 
 export const Repositories = styled.div`
@@ -87,7 +113,8 @@ export const Repositories = styled.div`
 
   div {
     margin: 0 16px;
-    flex: 1 strong {
+    flex: 1;
+    strong {
       font-size: 20px;
       color: #3d3d4d;
     }
@@ -101,6 +128,49 @@ export const Repositories = styled.div`
   svg {
     margin-left: auto;
     color: #cbcbd6;
+  }
+
+  @media only screen and (max-width: 430px) {
+    max-width: 90%;
+    a {
+      background: #fff;
+      border-radius: 5px;
+      width: 100%;
+      padding: 24px 8px;
+      display: block;
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      flex: 1;
+      strong {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    max-width: 90%;
+    a {
+      width: 100%;
+      padding: 24px 8px;
+    }
+    div {
+      strong {
+        font-size: 18px;
+      }
+      p {
+        max-width: 150px;
+        font-size: 16px;
+      }
+    }
   }
 `;
 
